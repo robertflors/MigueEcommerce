@@ -17,6 +17,12 @@ productos.push(new Producto("cuadros", 4, 1000, "img/cuadro.jpg"));
 
 const boton = document.getElementById("despliego");
 boton.addEventListener('click', opciones);
+
+// función que transforma a JSON un array de objetos
+function carroJSON (dato){
+    let carritoJSON = JSON.stringify(dato);
+    localStorage.setItem('carrito', carritoJSON);
+}
 //función asociada al evento que despliega por el DOM las opciones de compra 
 function opciones(e) {
     let menu = '';
@@ -53,7 +59,8 @@ function opciones(e) {
         productosElegidos.push(productoElegido);
         console.log(productosElegidos);
         agregarAlCarrito();
-         }
+        carroJSON(productosElegidos);
+        }
         
     }
    
