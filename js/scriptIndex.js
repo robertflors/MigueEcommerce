@@ -7,6 +7,7 @@ function Producto(nombre, serial, precio, img) {
 
 const productos = [];
 let productosElegidos = [];
+let carro = [];
 let tienda = document.getElementById("seleccionProductos");
 let listado = document.createElement("div");
 
@@ -20,20 +21,20 @@ boton.addEventListener('click', opciones);
 
 // función que transforma a JSON un array de objetos
 function carroJSON (dato){
-    // let compra = [];
-    // compra = compra.concat(dato);
     let carritoJSON = JSON.stringify(dato);
     console.warn(carritoJSON);
     localStorage.setItem('carrito', carritoJSON);
 }
 // función llamada en los eventos de "botonCarrito" que crea el array de los productos elegidos al presionar el botón de comprar
 function seleccionarProducto (e){
+    
     let productoElegido = productos.find(obj => obj.serial == e.target.id);
     console.log(productoElegido);
     productosElegidos.push(productoElegido);
     console.log(productosElegidos);
-    carroJSON(productosElegidos);
-    // agregarAlCarrito();
+    // carroJSON(productosElegidos);
+    carro = productosElegidos;
+    carroJSON(carro);
    }
 
 //función asociada al evento que despliega por el DOM las opciones de compra 
