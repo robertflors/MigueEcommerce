@@ -6,7 +6,7 @@ function Producto(nombre, serial, precio, img) {
 }
 
 const productos = [];
-const productosElegidos = [];
+let productosElegidos = [];
 let tienda = document.getElementById("seleccionProductos");
 let listado = document.createElement("div");
 
@@ -20,9 +20,22 @@ boton.addEventListener('click', opciones);
 
 // función que transforma a JSON un array de objetos
 function carroJSON (dato){
+    // let compra = [];
+    // compra = compra.concat(dato);
     let carritoJSON = JSON.stringify(dato);
+    console.warn(carritoJSON);
     localStorage.setItem('carrito', carritoJSON);
 }
+// función llamada en los eventos de "botonCarrito" que crea el array de los productos elegidos al presionar el botón de comprar
+function seleccionarProducto (e){
+    let productoElegido = productos.find(obj => obj.serial == e.target.id);
+    console.log(productoElegido);
+    productosElegidos.push(productoElegido);
+    console.log(productosElegidos);
+    carroJSON(productosElegidos);
+    // agregarAlCarrito();
+   }
+
 //función asociada al evento que despliega por el DOM las opciones de compra 
 function opciones(e) {
     let menu = '';
@@ -38,12 +51,9 @@ function opciones(e) {
                          </div>
                          </div>`
           } 
-
-          listado.innerHTML = menu;
-        
-          tienda.appendChild(listado);  
-        
          listado.classList.add('seccionDeTienda--flexible'); 
+         listado.innerHTML = menu;        
+         tienda.appendChild(listado);                
         }  
         // para que en el condicional no se sigan desplegando menúes cada vez que suceda el evento
         tienda.value = false;
@@ -51,31 +61,9 @@ function opciones(e) {
         let botonesCarrito = document.getElementsByClassName("btn");
         for (const botonC of botonesCarrito){
         botonC.addEventListener('click' , seleccionarProducto);
-        }
- 
-        function seleccionarProducto (e){
-        let productoElegido = productos.find(obj => obj.serial == e.target.id);
-        console.log(productoElegido);
-        productosElegidos.push(productoElegido);
-        console.log(productosElegidos);
-        agregarAlCarrito();
-        carroJSON(productosElegidos);
-        }
-        
+        }       
     }
    
-    function agregarAlCarrito(){
-        let tablaCompras = document.getElementById("carroCompras");
-        console.log(tablaCompras);
-        let tablaProducto = document.createElement("tr");        
-        for (const elemento of productosElegidos){
-        tablaProducto.innerHTML = ` <td> <img src='${elemento.img}' class='imgCarrito'></td>
-                                    <td> ${elemento.nombre} </td>
-                                    <td> ${elemento.precio} </td> `
-                    }    
-        tablaCompras.appendChild(tablaProducto);
-
-    }
     const botonR= document.getElementById("recoge");
     botonR.addEventListener('click', eliminarMenu);
 
@@ -83,6 +71,8 @@ function opciones(e) {
     tienda.removeChild(listado);
     tienda.value = true;
  }
+
+
 
 //  ahora que tengo el JSON del carrito en el storage, probar hacer un parse a ese array para generar el HTML del carrito
 // hacer un JS para carrito específicamente con las funciones para extraer la info del storage y generar el nuevo DOM
