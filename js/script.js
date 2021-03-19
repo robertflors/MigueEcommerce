@@ -83,3 +83,9 @@ function opciones(e) {
     tienda.removeChild(listado);
     tienda.value = true;
  }
+
+//  ahora que tengo el JSON del carrito en el storage, probar hacer un parse a ese array para generar el HTML del carrito
+// hacer un JS para carrito específicamente con las funciones para extraer la info del storage y generar el nuevo DOM
+// a su vez probar el método que usé para eleminar el menú desplegado, pero para eliminar items del carrito con un botón
+// X o algo por el estilo, probar con JQUERY para a su vez agregar los elementos al carrito al revés con "prepend"
+// en lugar del append 
