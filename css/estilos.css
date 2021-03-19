@@ -1,0 +1,40 @@
+nav div.container-fluid {
+  background-color: #d66aa2; }
+  nav div.container-fluid a#logo {
+    margin-left: 10%; }
+  nav div.container-fluid a#carrito {
+    margin-right: 5%; }
+  nav div.container-fluid a#favoritos {
+    margin-right: 10%; }
+
+.seccionDeTienda--flexible {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.imagenProducto {
+  width: 200px;
+  height: 200px; }
+
+.botonComprar {
+  background-color: transparent;
+  color: #2c2b2b;
+  border: 2px solid #d66aa2; }
+
+.botonComprar:hover {
+  background-color: #d66aa2;
+  color: white; }
+
+table#carroCompras {
+  width: 80%;
+  border: solid 1px #766F6F;
+  margin: 2% auto; }
+  table#carroCompras th {
+    border: solid 1px #766F6F; }
+  table#carroCompras th, table#carroCompras td {
+    padding: 5px; }
+
+.imgCarrito {
+  width: 50px;
+  height: 50px; }
