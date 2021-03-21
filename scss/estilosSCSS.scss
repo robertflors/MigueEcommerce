@@ -42,7 +42,7 @@ nav{
     
 }
 
-table#carroCompras{
+table.tablaDeCompras{
     width: 80%;
     border: solid 1px $gris-Medio;
     margin: 2% auto;
@@ -57,4 +57,9 @@ table#carroCompras{
 .imgCarrito{
     width: 50px;
     height: 50px;
+}
+
+.contenedorBotonesIndex{
+    display: flex;
+    justify-content: center;
 }
