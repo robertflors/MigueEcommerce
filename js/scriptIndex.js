@@ -14,6 +14,8 @@ productos.push(new Producto("cuadros", 4, 1000, "img/cuadro.jpg"));
 let productosElegidos = [];
 let tienda = document.getElementById("seleccionProductos");
 let listado = document.createElement("div");
+let contador = document.getElementById("contadorCarrito");
+let contando = document.createElement("p");
 
 const boton = document.getElementById("despliego");
 boton.addEventListener('click', opciones);
@@ -66,8 +68,14 @@ function opciones(e) {
         let botonesCarrito = document.getElementsByClassName("btn");
         for (const botonC of botonesCarrito){
         botonC.addEventListener('click' , seleccionarProducto);
+        botonC.addEventListener('click', contandoCarro)
         }       
-    }  
+    } 
+      function contandoCarro (e){
+        let elementos = JSON.parse(localStorage.getItem('carrito'));
+        contando.innerHTML = `${elementos.length}`
+        contador.appendChild(contando);
+    } 
 //Función para replegar el menú en el index 
 function eliminarMenu(e){
 tienda.removeChild(listado);
