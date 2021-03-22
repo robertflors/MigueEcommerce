@@ -73,9 +73,3 @@ function eliminarMenu(e){
 tienda.removeChild(listado);
 tienda.value = true;
  }
-
-
-//Hacer un botón que limpie el storage para que no se embasure el carrito
-//probar el método que usé para eleminar el menú desplegado, pero para eliminar items del carrito con un botón
-// X o algo por el estilo, probar con JQUERY para a su vez agregar los elementos al carrito al revés con "prepend"
-// en lugar del append 

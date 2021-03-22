@@ -1,9 +1,14 @@
 let carrito2 = JSON.parse(localStorage.getItem('carrito'));
+let tablaCompras = document.getElementById("carroCompras");
+let tablaProducto = document.createElement("table");
+
 console.log(carrito2);
 
-function agregarAlCarrito(carro){
-    let tablaCompras = document.getElementById("carroCompras");
-    let tablaProducto = document.createElement("table");
+const botonE = document.getElementById("eliminarCarrito");
+botonE.addEventListener('click', eliminarTabla);
+
+function agregarAlCarrito(carro){  
+    
     tablaProducto.innerHTML = ` <tr>
                                  <th colspan="2">Producto</th>
                                  <th>Precio</th>
@@ -16,5 +21,10 @@ function agregarAlCarrito(carro){
     tablaProducto.classList.add('tablaDeCompras');               
     tablaCompras.appendChild(tablaProducto);
 }
+
+function eliminarTabla (e) {
+      tablaCompras.removeChild(tablaProducto);
+      localStorage.removeItem('carrito');
+ } 
   agregarAlCarrito(carrito2);
 
