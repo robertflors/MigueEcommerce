@@ -1,30 +1,23 @@
 let carrito2 = JSON.parse(localStorage.getItem('carrito'));
 let tablaCompras = document.getElementById("carroCompras");
-let tablaProducto = document.createElement("table");
-
-console.log(carrito2);
 
 const botonE = document.getElementById("eliminarCarrito");
 botonE.addEventListener('click', eliminarTabla);
-
-function agregarAlCarrito(carro){  
-    
-    tablaProducto.innerHTML = ` <tr>
-                                 <th colspan="2">Producto</th>
-                                 <th>Precio</th>
-                                </tr>`        
-    for (const elemento of carro){
-    tablaProducto.innerHTML += `<tr><td> <img src='${elemento.img}' class='imgCarrito'></td>
+//función que genera una tabla donde se insertan los productos seleccionados, usando el localStorage
+function agregarAlCarrito(carro) {
+  for (const elemento of carro) {
+    let tablaProducto = document.createElement("tr");
+    tablaProducto.innerHTML =  `<td> <img src='${elemento.img}' class='imgCarrito'></td>
                                 <td> ${elemento.nombre} </td>
-                                <td> ${elemento.precio} </td></tr>`
-                }  
-    tablaProducto.classList.add('tablaDeCompras');               
-    tablaCompras.appendChild(tablaProducto);
+                                <td> ${elemento.precio} </td>
+                                <td> ${elemento.cant} </td>`
+                                tablaCompras.append(tablaProducto);
+                                
+  }
 }
-
-function eliminarTabla (e) {
-      tablaCompras.removeChild(tablaProducto);
-      localStorage.removeItem('carrito');
- } 
-  agregarAlCarrito(carrito2);
-
+//función para eliminar toda la tabla generada por la elección de los productos y el localStorage
+function eliminarTabla(e) {
+  document.getElementById('contenedorTablaCompra').removeChild(tablaCompras);
+  localStorage.removeItem('carrito');
+}
+agregarAlCarrito(carrito2);

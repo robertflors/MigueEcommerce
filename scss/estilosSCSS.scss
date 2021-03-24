@@ -3,63 +3,69 @@ $gris-Oscuro: #2c2b2b;
 $gris-Medio: #766F6F;
 $gris-Claro: #BEB6B6;
 
-nav{
-    div.container-fluid{
+nav {
+    div.container-fluid {
         background-color: $rosado;
-        a#logo{
+
+        a#logo {
             margin-left: 10%;
         }
-        a#carrito{
+
+        a#carrito {
             margin-right: 5%;
         }
-        a#favoritos{
+
+        a#favoritos {
             margin-right: 10%;
         }
     }
 }
 
-.seccionDeTienda--flexible{
+.seccionDeTienda--flexible {
     display: flex;
- 	flex-wrap: wrap;
- 	flex-direction: row;
- 	justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.imagenProducto{
+.imagenProducto {
     width: 200px;
     height: 200px;
 }
 
-.botonComprar{
+.botonComprar {
     background-color: transparent;
     color: $gris-Oscuro;
-    border: 2px solid $rosado;  
+    border: 2px solid $rosado;
 }
 
-.botonComprar:hover{
+.botonComprar:hover {
     background-color: $rosado;
     color: white;
-    
+
 }
 
-table.tablaDeCompras{
+/*table.tablaDeCompras*/ #carroCompras {
     width: 80%;
     border: solid 1px $gris-Medio;
     margin: 2% auto;
-    th{
-    border: solid 1px $gris-Medio;   
+
+    th {
+        border: solid 1px $gris-Medio;
     }
-    th, td{
+
+    th,
+    td {
         padding: 5px;
-    }   
+    }
 }
 
-.imgCarrito{
+.imgCarrito {
     width: 50px;
     height: 50px;
 }
 
-.contenedorBotonesBody{
+.contenedorBotonesBody {
     display: flex;
     justify-content: center;
 }

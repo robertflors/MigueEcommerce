@@ -26,13 +26,15 @@ nav div.container-fluid {
   background-color: #d66aa2;
   color: white; }
 
-table.tablaDeCompras {
+/*table.tablaDeCompras*/
+#carroCompras {
   width: 80%;
   border: solid 1px #766F6F;
   margin: 2% auto; }
-  table.tablaDeCompras th {
+  #carroCompras th {
     border: solid 1px #766F6F; }
-  table.tablaDeCompras th, table.tablaDeCompras td {
+  #carroCompras th,
+  #carroCompras td {
     padding: 5px; }
 
 .imgCarrito {

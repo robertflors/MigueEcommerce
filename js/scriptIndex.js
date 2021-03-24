@@ -1,8 +1,24 @@
-function Producto(nombre, serial, precio, img) {
-    this.nombre = nombre;
-    this.serial = serial;
-    this.precio = precio;
-    this.img = img;
+// function Producto(nombre, serial, precio, img) {
+//     this.nombre = nombre;
+//     this.serial = serial;
+//     this.precio = precio;
+//     this.img = img;
+//     this.cant = 1;
+// }
+class Producto {
+    constructor(nombre, serial, precio, img) {
+    this.nombre   = nombre;
+    this.serial   = serial;
+    this.precio   = precio;
+    this.img      = img;
+    this.cant     = 1;
+    }
+    sumarCantidad(){
+        this.cantidad++; 
+      }
+    sumarPrecio(agregado){
+        this.precio += agregado;
+    }  
 }
 
 const productos = [];
@@ -20,36 +36,40 @@ let contando = document.createElement("p");
 const boton = document.getElementById("despliego");
 boton.addEventListener('click', opciones);
 
-const botonR= document.getElementById("recoge");
+const botonR = document.getElementById("recoge");
 botonR.addEventListener('click', eliminarMenu);
 
 // función que agrega productos al array del localstorage
-function carroJSON (dato){ 
+function carroJSON(dato) {
     //si el carrito de storage no existe crea el primer elemento         
-    if (!localStorage.getItem('carrito')){ 
+    if (!localStorage.getItem('carrito')) {
         let carritoJSON = JSON.stringify(productosElegidos);
-        localStorage.setItem('carrito', carritoJSON); 
+        localStorage.setItem('carrito', carritoJSON);
     }
     //si ya hay un valor en el carrito le hace un psuh al array del storage
     else {
-        let validarCarrito = JSON.parse(localStorage.getItem('carrito'));       
-        validarCarrito.push(dato);  
-        localStorage.setItem('carrito', JSON.stringify(validarCarrito));     
+        let validarCarrito = JSON.parse(localStorage.getItem('carrito'));
+        validarCarrito.push(dato);
+        localStorage.setItem('carrito', JSON.stringify(validarCarrito));
     }
 }
 // función llamada en los eventos de "botonCarrito" que crea el array de los productos elegidos al presionar el botón de comprar
-function seleccionarProducto (e){    
+function seleccionarProducto(e) {
+    // let buscarProducto = productos.find(elemento => elemento.id == evento.target.id);
+    // if (buscarProducto === undefined) {
+        
+    // }
     let productoElegido = productos.find(obj => obj.serial == e.target.id);
     productosElegidos.push(productoElegido);
     carroJSON(productoElegido);
-   }
+}
 //función asociada al evento que despliega por el DOM las opciones de compra 
 function opciones(e) {
     let menu = '';
-       // condicional para que se despliegue una sola vez el menú.
-       if (tienda.value != false) {
+    // condicional para que se despliegue una sola vez el menú.
+    if (tienda.value != false) {
         for (let producto of productos) {
-                menu += `<div class='card' style='width: 18rem;'>
+            menu += `<div class='card' style='width: 18rem;'>
                          <img src='${producto.img}' class='card-img-top'>
                          <div class='card-body'>
                          <h5 class='card-title'>${producto.nombre}</h5>
@@ -57,27 +77,28 @@ function opciones(e) {
                          <button class='btn botonComprar' id='${producto.serial}'><img id='${producto.serial}' src='img/carrito.png'></button>
                          </div>
                          </div>`
-          } 
-         listado.classList.add('seccionDeTienda--flexible'); 
-         listado.innerHTML = menu;        
-         tienda.appendChild(listado);                
-        }  
-        // para que en el condicional no se sigan desplegando menúes cada vez que suceda el evento
-        tienda.value = false;
+        }
+        listado.classList.add('seccionDeTienda--flexible');
+        listado.innerHTML = menu;
+        tienda.appendChild(listado);
+    }
+    // para que en el condicional no se sigan desplegando menúes cada vez que suceda el evento
+    tienda.value = false;
 
-        let botonesCarrito = document.getElementsByClassName("btn");
-        for (const botonC of botonesCarrito){
-        botonC.addEventListener('click' , seleccionarProducto);
+    let botonesCarrito = document.getElementsByClassName("btn");
+    for (const botonC of botonesCarrito) {
+        botonC.addEventListener('click', seleccionarProducto);
         botonC.addEventListener('click', contandoCarro)
-        }       
-    } 
-      function contandoCarro (e){
-        let elementos = JSON.parse(localStorage.getItem('carrito'));
-        contando.innerHTML = `${elementos.length}`
-        contador.appendChild(contando);
-    } 
+    }
+}
+//Función que agrega un contador en el navbar a la hora de seleccionar productos en el menú
+function contandoCarro(e) {
+    let elementos = JSON.parse(localStorage.getItem('carrito'));
+    contando.innerHTML = `${elementos.length}`
+    contador.appendChild(contando);
+}
 //Función para replegar el menú en el index 
-function eliminarMenu(e){
-tienda.removeChild(listado);
-tienda.value = true;
- }
+function eliminarMenu(e) {
+    tienda.removeChild(listado);
+    tienda.value = true;
+}
