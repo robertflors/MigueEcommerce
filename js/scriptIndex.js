@@ -1,10 +1,3 @@
-// function Producto(nombre, serial, precio, img) {
-//     this.nombre = nombre;
-//     this.serial = serial;
-//     this.precio = precio;
-//     this.img = img;
-//     this.cant = 1;
-// }
 class Producto {
     constructor(nombre, serial, precio, img) {
         this.nombre = nombre;
@@ -51,8 +44,7 @@ function carroJSON(dato) {
         const validarCarrito = JSON.parse(localStorage.getItem('carrito'));
         let buscarProducto = validarCarrito.find(obj => obj.serial == dato.serial);
         if (buscarProducto != undefined) {
-            buscarProducto.cant++;
-            
+            buscarProducto.cant++;            
             for (let i = 0; i < validarCarrito.length; i++) {
                 if (validarCarrito[i].serial == buscarProducto.serial) {
                     validarCarrito[i].cant = buscarProducto.cant;
@@ -66,11 +58,6 @@ function carroJSON(dato) {
 }
 // función llamada en los eventos de "botonCarrito" que crea el array de los productos elegidos al presionar el botón de comprar
 function seleccionarProducto(e) {
-    // let buscarProducto = productosElegidos.find(obj => obj.serial == e.target.id);
-    // if (buscarProducto != undefined) {
-    //     buscarProducto.sumarCantidad();
-    //     carroJSON(buscarProducto);
-    // }
     let productoElegido = productos.find(obj => obj.serial == e.target.id);
     productosElegidos.push(productoElegido);
     carroJSON(productoElegido);
@@ -114,3 +101,9 @@ function eliminarMenu(e) {
     tienda.removeChild(listado);
     tienda.value = true;
 }
+//USO DE JQUERY PARA EL DESAFÍO
+$(document).ready(function () {
+    let elementos = JSON.parse(localStorage.getItem('carrito'));
+    contando.innerHTML = `${elementos.length}`
+    contador.appendChild(contando);
+});

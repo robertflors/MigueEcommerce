@@ -7,15 +7,22 @@ nav {
     div.container-fluid {
         background-color: $rosado;
 
-        a#logo {
+        a.logo {
             margin-left: 10%;
         }
 
-        a#carrito {
+        a.carritoIcono {
             margin-right: 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        
+            text-decoration: none;
+            color: red;
+            font-weight: bold;
         }
 
-        a#favoritos {
+        a.favoritos {
             margin-right: 10%;
         }
     }
@@ -69,3 +76,13 @@ nav {
     display: flex;
     justify-content: center;
 }
+
+// .contadorNav{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+
+//     text-decoration: none;
+//     color: red;
+//     font-weight: bold;
+// }

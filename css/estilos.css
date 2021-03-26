@@ -1,10 +1,16 @@
 nav div.container-fluid {
   background-color: #d66aa2; }
-  nav div.container-fluid a#logo {
+  nav div.container-fluid a.logo {
     margin-left: 10%; }
-  nav div.container-fluid a#carrito {
-    margin-right: 5%; }
-  nav div.container-fluid a#favoritos {
+  nav div.container-fluid a.carritoIcono {
+    margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;
+    color: red;
+    font-weight: bold; }
+  nav div.container-fluid a.favoritos {
     margin-right: 10%; }
 
 .seccionDeTienda--flexible {
