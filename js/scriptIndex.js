@@ -7,18 +7,18 @@
 // }
 class Producto {
     constructor(nombre, serial, precio, img) {
-    this.nombre   = nombre;
-    this.serial   = serial;
-    this.precio   = precio;
-    this.img      = img;
-    this.cant     = 1;
+        this.nombre = nombre;
+        this.serial = serial;
+        this.precio = precio;
+        this.img = img;
+        this.cant = 1;
     }
-    sumarCantidad(){
-        this.cantidad++; 
-      }
-    sumarPrecio(agregado){
+    sumarCantidad() {
+        this.cant++;
+    }
+    sumarPrecio(agregado) {
         this.precio += agregado;
-    }  
+    }
 }
 
 const productos = [];
@@ -27,7 +27,7 @@ productos.push(new Producto("remeras", 2, 500, "img/remera.jpg"));
 productos.push(new Producto("tazas", 3, 250, "img/taza.jpg"));
 productos.push(new Producto("cuadros", 4, 1000, "img/cuadro.jpg"));
 
-let productosElegidos = [];
+const productosElegidos = [];
 let tienda = document.getElementById("seleccionProductos");
 let listado = document.createElement("div");
 let contador = document.getElementById("contadorCarrito");
@@ -48,16 +48,28 @@ function carroJSON(dato) {
     }
     //si ya hay un valor en el carrito le hace un psuh al array del storage
     else {
-        let validarCarrito = JSON.parse(localStorage.getItem('carrito'));
-        validarCarrito.push(dato);
+        const validarCarrito = JSON.parse(localStorage.getItem('carrito'));
+        let buscarProducto = validarCarrito.find(obj => obj.serial == dato.serial);
+        if (buscarProducto != undefined) {
+            buscarProducto.cant++;
+            
+            for (let i = 0; i < validarCarrito.length; i++) {
+                if (validarCarrito[i].serial == buscarProducto.serial) {
+                    validarCarrito[i].cant = buscarProducto.cant;
+                }
+            }
+        } else {
+            validarCarrito.push(dato);
+        }
         localStorage.setItem('carrito', JSON.stringify(validarCarrito));
     }
 }
 // función llamada en los eventos de "botonCarrito" que crea el array de los productos elegidos al presionar el botón de comprar
 function seleccionarProducto(e) {
-    // let buscarProducto = productos.find(elemento => elemento.id == evento.target.id);
-    // if (buscarProducto === undefined) {
-        
+    // let buscarProducto = productosElegidos.find(obj => obj.serial == e.target.id);
+    // if (buscarProducto != undefined) {
+    //     buscarProducto.sumarCantidad();
+    //     carroJSON(buscarProducto);
     // }
     let productoElegido = productos.find(obj => obj.serial == e.target.id);
     productosElegidos.push(productoElegido);
