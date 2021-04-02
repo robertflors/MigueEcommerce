@@ -1,7 +1,7 @@
-$rosado:#d66aa2;
+$rosado:#e58fbc;
 $gris-Oscuro: #2c2b2b;
 $gris-Medio: #766F6F;
-$gris-Claro: #BEB6B6;
+$gris-Claro: #dfdede;
 
 nav {
     div.container-fluid {
@@ -77,12 +77,15 @@ nav {
     justify-content: center;
 }
 
-// .contadorNav{
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
+#toast{
+    display: none;
+    position: relative;
+    opacity: 0.8;
+    background-color: $gris-Claro;
+    color: $gris-Oscuro;
+    text-align: center;
+    margin: -15% auto;
+    padding: 10px;
+    border-radius: 10px;
 
-//     text-decoration: none;
-//     color: red;
-//     font-weight: bold;
-// }
+}

@@ -29,9 +29,6 @@ let contando = document.createElement("p");
 const boton = document.getElementById("despliego");
 boton.addEventListener('click', opciones);
 
-const botonR = document.getElementById("recoge");
-botonR.addEventListener('click', eliminarMenu);
-
 // función que agrega productos al array del localstorage
 function carroJSON(dato) {
     //si el carrito de storage no existe crea el primer elemento         
@@ -87,23 +84,36 @@ function opciones(e) {
     let botonesCarrito = document.getElementsByClassName("btn");
     for (const botonC of botonesCarrito) {
         botonC.addEventListener('click', seleccionarProducto);
-        botonC.addEventListener('click', contandoCarro)
+        botonC.addEventListener('click', contandoCarro);
+       
     }
+    //ANIMACIÓN DE "TOAST" CUANDO SE ELIGE UN PRODUCTO
+    $ (".btn").click(() => {
+        $("#toast").fadeIn(100)
+                   .delay(1000)
+                   .slideUp(100);
+    })
 }
+
 //Función que agrega un contador en el navbar a la hora de seleccionar productos en el menú
 function contandoCarro(e) {
     let elementos = JSON.parse(localStorage.getItem('carrito'));
     contando.innerHTML = `${elementos.length}`
     contador.appendChild(contando);
 }
-//Función para replegar el menú en el index 
-function eliminarMenu(e) {
-    tienda.removeChild(listado);
-    tienda.value = true;
-}
+
 //USO DE JQUERY PARA EL DESAFÍO
 $(document).ready(function () {
     let elementos = JSON.parse(localStorage.getItem('carrito'));
     contando.innerHTML = `${elementos.length}`
     contador.appendChild(contando);
 });
+$("#recoge").click(function (e) { 
+    e.preventDefault();
+    tienda.removeChild(listado);
+    tienda.value = true;   
+});
+
+$ (".btn").click(() => {
+    $("#toast").fadeIn("slow");
+})

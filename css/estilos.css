@@ -1,5 +1,5 @@
 nav div.container-fluid {
-  background-color: #d66aa2; }
+  background-color: #e58fbc; }
   nav div.container-fluid a.logo {
     margin-left: 10%; }
   nav div.container-fluid a.carritoIcono {
@@ -26,10 +26,10 @@ nav div.container-fluid {
 .botonComprar {
   background-color: transparent;
   color: #2c2b2b;
-  border: 2px solid #d66aa2; }
+  border: 2px solid #e58fbc; }
 
 .botonComprar:hover {
-  background-color: #d66aa2;
+  background-color: #e58fbc;
   color: white; }
 
 /*table.tablaDeCompras*/
@@ -50,3 +50,14 @@ nav div.container-fluid {
 .contenedorBotonesBody {
   display: flex;
   justify-content: center; }
+
+#toast {
+  display: none;
+  position: relative;
+  opacity: 0.8;
+  background-color: #dfdede;
+  color: #2c2b2b;
+  text-align: center;
+  margin: -15% auto;
+  padding: 10px;
+  border-radius: 10px; }
