@@ -92,3 +92,28 @@ svg {
 @media (min-width: 700px) {
   .svg--sm {
     display: none; } }
+
+#main-index__imagenPokemon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+  height: 30rem;
+  background-image: url(../img/pokemon2-min.jpg);
+  background-position: center center;
+  background-size: cover;
+  position: relative; }
+  #main-index__imagenPokemon h3 {
+    color: white;
+    font-size: 30px;
+    position: relative;
+    text-align: center; }
+
+#main-index__imagenPokemon:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6); }

@@ -88,11 +88,11 @@ function opciones(e) {
        
     }
     //ANIMACIÓN DE "TOAST" CUANDO SE ELIGE UN PRODUCTO
-    $ (".btn").click(() => {
-        $("#toast").fadeIn(100)
-                   .delay(1000)
-                   .slideUp(100);
-    })
+    // $ (".btn").click(() => {
+    //     $("#toast").fadeIn(100)
+    //                .delay(1000)
+    //                .slideUp(100);
+    // })
 }
 
 //Función que agrega un contador en el navbar a la hora de seleccionar productos en el menú
@@ -102,7 +102,7 @@ function contandoCarro(e) {
     contador.appendChild(contando);
 }
 
-//USO DE JQUERY PARA EL DESAFÍO
+
 $(document).ready(function () {
     let elementos = JSON.parse(localStorage.getItem('carrito'));
     contando.innerHTML = `${elementos.length}`
