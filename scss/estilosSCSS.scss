@@ -3,10 +3,12 @@ $gris-Oscuro: #2c2b2b;
 $gris-Medio: #766F6F;
 $gris-Claro: #dfdede;
 
+*{
+    margin: 0;
+}
 nav {
-    div.container-fluid {
-        background-color: $rosado;
-
+    background-color: $rosado;
+    div.container-fluid { 
         a.logo {
             margin-left: 10%;
         }
@@ -26,6 +28,7 @@ nav {
             margin-right: 10%;
         }
     }
+    margin-bottom: 0px;
 }
 
 .seccionDeTienda--flexible {
@@ -52,7 +55,7 @@ nav {
 
 }
 
-/*table.tablaDeCompras*/ #carroCompras {
+#carroCompras {
     width: 80%;
     border: solid 1px $gris-Medio;
     margin: 2% auto;
@@ -61,8 +64,7 @@ nav {
         border: solid 1px $gris-Medio;
     }
 
-    th,
-    td {
+    th, td {
         padding: 5px;
     }
 }
@@ -87,5 +89,38 @@ nav {
     margin: -15% auto;
     padding: 10px;
     border-radius: 10px;
-
 }
+
+div.figuraSVG{   
+    position: relative;
+    height: 100px;
+    background-color: $rosado;
+    margin-top: 0px;
+    margin-bottom: 1%;
+  }
+  footer{
+    position: fixed;
+    height: 100px;
+    background-color: $rosado;
+    margin-top: 0px;
+    margin-bottom: 1%;
+    bottom: 0;
+  }
+  svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;    
+  }
+   
+  @media (max-width: 699px) {
+    .svg--lg {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 700px) {
+    .svg--sm {
+      display: none;
+    }
+  }

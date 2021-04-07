@@ -1,5 +1,9 @@
-nav div.container-fluid {
-  background-color: #e58fbc; }
+* {
+  margin: 0; }
+
+nav {
+  background-color: #e58fbc;
+  margin-bottom: 0px; }
   nav div.container-fluid a.logo {
     margin-left: 10%; }
   nav div.container-fluid a.carritoIcono {
@@ -32,15 +36,13 @@ nav div.container-fluid {
   background-color: #e58fbc;
   color: white; }
 
-/*table.tablaDeCompras*/
 #carroCompras {
   width: 80%;
   border: solid 1px #766F6F;
   margin: 2% auto; }
   #carroCompras th {
     border: solid 1px #766F6F; }
-  #carroCompras th,
-  #carroCompras td {
+  #carroCompras th, #carroCompras td {
     padding: 5px; }
 
 .imgCarrito {
@@ -61,3 +63,32 @@ nav div.container-fluid {
   margin: -15% auto;
   padding: 10px;
   border-radius: 10px; }
+
+div.figuraSVG {
+  position: relative;
+  height: 100px;
+  background-color: #e58fbc;
+  margin-top: 0px;
+  margin-bottom: 1%; }
+
+footer {
+  position: fixed;
+  height: 100px;
+  background-color: #e58fbc;
+  margin-top: 0px;
+  margin-bottom: 1%;
+  bottom: 0; }
+
+svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px; }
+
+@media (max-width: 699px) {
+  .svg--lg {
+    display: none; } }
+
+@media (min-width: 700px) {
+  .svg--sm {
+    display: none; } }

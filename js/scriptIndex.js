@@ -44,7 +44,7 @@ function carroJSON(dato) {
             buscarProducto.cant++;            
             for (let i = 0; i < validarCarrito.length; i++) {
                 if (validarCarrito[i].serial == buscarProducto.serial) {
-                    validarCarrito[i].cant = buscarProducto.cant;
+                    validarCarrito[i].cant = buscarProducto.cant;        
                 }
             }
         } else {
@@ -113,7 +113,3 @@ $("#recoge").click(function (e) {
     tienda.removeChild(listado);
     tienda.value = true;   
 });
-
-$ (".btn").click(() => {
-    $("#toast").fadeIn("slow");
-})
