@@ -48,13 +48,33 @@ nav {
     color: $gris-Oscuro;
     border: 2px solid $rosado;
 }
-
 .botonComprar:hover {
     background-color: $rosado;
     color: white;
-
 }
 
+.botonPokemon {
+    background-color: rgba(255, 0, 0, 0.384);
+    border: none; 
+}
+.botonPokemon:hover {
+    background-color: rgb(255, 0, 0);
+    border: white;    
+}
+
+.botonPokedex{
+    background-color: rgb(255, 70, 70);
+    color: white;   
+}
+div.modal-content{
+    background-color: red;
+    color: white;
+    border: 2px solid rgb(247, 247, 115);
+}
+h5#staticBackdropLabel{
+    font-size: 200%;
+    color: rgb(247, 247, 115);
+}
 #carroCompras {
     width: 80%;
     border: solid 1px $gris-Medio;
@@ -159,3 +179,8 @@ div.figuraSVG{
 	right: 0;
 	background-color: rgba(0,0,0,0.6);
 }
+
+// form{
+//     background-color: red;
+//     color: white;
+// }

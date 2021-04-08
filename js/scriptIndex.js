@@ -88,11 +88,11 @@ function opciones(e) {
        
     }
     //ANIMACIÓN DE "TOAST" CUANDO SE ELIGE UN PRODUCTO
-    // $ (".btn").click(() => {
-    //     $("#toast").fadeIn(100)
-    //                .delay(1000)
-    //                .slideUp(100);
-    // })
+    $ (".btn").click(() => {
+        $("#toast").fadeIn(100)
+                   .delay(1000)
+                   .slideUp(100);
+    })
 }
 
 //Función que agrega un contador en el navbar a la hora de seleccionar productos en el menú
@@ -102,12 +102,13 @@ function contandoCarro(e) {
     contador.appendChild(contando);
 }
 
-
+// para mostrar el contador del carrito cuando se abre la página
 $(document).ready(function () {
     let elementos = JSON.parse(localStorage.getItem('carrito'));
     contando.innerHTML = `${elementos.length}`
     contador.appendChild(contando);
 });
+// para recoger el menú que se despliega en el index
 $("#recoge").click(function (e) { 
     e.preventDefault();
     tienda.removeChild(listado);

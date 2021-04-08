@@ -36,6 +36,27 @@ nav {
   background-color: #e58fbc;
   color: white; }
 
+.botonPokemon {
+  background-color: rgba(255, 0, 0, 0.384);
+  border: none; }
+
+.botonPokemon:hover {
+  background-color: red;
+  border: white; }
+
+.botonPokedex {
+  background-color: #ff4646;
+  color: white; }
+
+div.modal-content {
+  background-color: red;
+  color: white;
+  border: 2px solid #f7f773; }
+
+h5#staticBackdropLabel {
+  font-size: 200%;
+  color: #f7f773; }
+
 #carroCompras {
   width: 80%;
   border: solid 1px #766F6F;

@@ -52,6 +52,43 @@
   </table>
   </section>
 
+  <!-- Button trigger modal -->
+<button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Pokedex</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="post">
+          <label for="pokedex">Elige tu pokémon</label>
+          <select class="form-select" id="pokedex">
+            <option selected>Elige tu pokémon</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn botonPokedex" data-bs-dismiss="modal">cerrar</button>
+        <button type="button" class="btn botonPokedex">aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id="main-index__imagenPokemon" class="container-fluid">
+    <button type="button" class="btn botonPokemon" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <h3>Elige al pokémon que quieras en tu producto</h3>
+    </button>
+  </div>
   <footer class="container-fluid">
     <div></div>
   </footer>
@@ -61,5 +98,6 @@
 <!--  scripts propios -->
 <script src="js/scriptIndex.js"></script>
 <script src="js/scriptCarrito.js"></script>
+<script src="js/pokedex.js"></script>
 </body>
 </html>
