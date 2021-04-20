@@ -57,14 +57,16 @@ h5#staticBackdropLabel {
   font-size: 200%;
   color: #f7f773; }
 
-#carroCompras {
+#contenedorTablaCompra table {
   width: 80%;
   border: solid 1px #766F6F;
   margin: 2% auto; }
-  #carroCompras th {
-    border: solid 1px #766F6F; }
-  #carroCompras th, #carroCompras td {
-    padding: 5px; }
+
+#contenedorTablaCompra th {
+  border: solid 1px #766F6F; }
+
+#contenedorTablaCompra th, #contenedorTablaCompra td {
+  padding: 5px; }
 
 .imgCarrito {
   width: 50px;

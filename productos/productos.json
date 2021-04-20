@@ -1,0 +1,178 @@
+ [{
+            "nombre": "remera1",
+            "serial": "r1",
+            "precio": 500,
+            "img": "./img/remera.jpg",
+            "tipo": "remera"
+        },
+        {
+            "nombre": "remera2",
+            "serial": "r2",
+            "precio": 500,
+            "img": "./img/remera.jpg",
+            "tipo": "remera"
+        },
+        {
+            "nombre": "remera3",
+            "serial": "r3",
+            "precio": 500,
+            "img": "./img/remera.jpg",
+            "tipo": "remera"
+
+        },
+        {
+            "nombre": "remera4",
+            "serial": "r4",
+            "precio": 500,
+            "img": "./img/remera.jpg",
+            "tipo": "remera"
+        },
+        {
+            "nombre": "remera5",
+            "serial": "r5",
+            "precio": 500,
+            "img": "./img/remera.jpg",
+            "tipo": "remera"
+        },
+        {
+            "nombre": "remera6",
+            "serial": "r6",
+            "precio": 500,
+            "img": "./img/remera.jpg",
+            "tipo": "remera"
+        },
+        {
+            "nombre": "remera7",
+            "serial": "r7",
+            "precio": 500,
+            "img": "./img/remera.jpg",
+            "tipo": "remera"
+        },
+        {
+            "nombre": "remera8",
+            "serial": "r8",
+            "precio": 500,
+            "img": "./img/remera.jpg",
+            "tipo": "remera"
+        },
+
+
+
+        {
+            "nombre": "sticker1",
+            "serial": "s1",
+            "precio": 100,
+            "img": "./img/sticker.jpg",
+            "tipo": "sticker"
+        },
+        {
+            "nombre": "sticker2",
+            "serial": "s2",
+            "precio": 100,
+            "img": "./img/sticker.jpg",
+            "tipo": "sticker"
+        },
+        {
+            "nombre": "sticekr3",
+            "serial": "s3",
+            "precio": 100,
+            "img": "./img/sticker.jpg",
+            "tipo": "sticker"
+        },
+        {
+            "nombre": "sticker4",
+            "serial": "s4",
+            "precio": 100,
+            "img": "./img/sticker.jpg",
+            "tipo": "sticker"
+
+        },
+        {
+            "nombre": "sticekr5",
+            "serial": "s5",
+            "precio": 100,
+            "img": "./img/sticker.jpg",
+            "tipo": "sticker"
+        },
+        {
+            "nombre": "sticker6",
+            "serial": "s6",
+            "precio": 100,
+            "img": "./img/sticker.jpg",
+            "tipo": "sticker"
+        },
+        {
+            "nombre": "sticker7",
+            "serial": "s7",
+            "precio": 100,
+            "img": "./img/sticker.jpg",
+            "tipo": "sticker"
+            
+        },
+        {
+            "nombre": "sticker8",
+            "serial": "s8",
+            "precio": 100,
+            "img": "./img/sticker.jpg",
+            "tipo": "sticker"
+        },
+
+
+        
+        {
+            "nombre": "tote bag1",
+            "serial": "t1",
+            "precio": 600,
+            "img": "./img/toteBag.jpg",
+            "tipo": "tote"
+        },
+        {
+            "nombre": "tote bag2",
+            "serial": "t2",
+            "precio": 600,
+            "img": "./img/toteBag.jpg",
+            "tipo": "tote"
+        },
+        {
+            "nombre": "tote bag3",
+            "serial": "t3",
+            "precio": 600,
+            "img": "./img/toteBag.jpg",
+            "tipo": "tote"
+        },
+        {
+            "nombre": "tote bag4",
+            "serial": "t4",
+            "precio": 600,
+            "img": "./img/toteBag.jpg",
+            "tipo": "tote"
+        },
+        {
+            "nombre": "tote bag5",
+            "serial": "t5",
+            "precio": 600,
+            "img": "./img/toteBag.jpg",
+            "tipo": "tote"
+        },
+        {
+            "nombre": "tote bag6",
+            "serial": "t6",
+            "precio": 600,
+            "img": "./img/toteBag.jpg",
+            "tipo": "tote"
+        },
+        {
+            "nombre": "tote bag7",
+            "serial": "t7",
+            "precio": 600,
+            "img": "./img/toteBag.jpg",
+            "tipo": "tote"
+        },
+        {
+            "nombre": "tote bag8",
+            "serial": "t8",
+            "precio": 600,
+            "img": "./img/toteBag.jpg",
+            "tipo": "tote"
+        }
+    ]

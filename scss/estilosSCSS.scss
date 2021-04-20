@@ -75,10 +75,12 @@ h5#staticBackdropLabel{
     font-size: 200%;
     color: rgb(247, 247, 115);
 }
-#carroCompras {
-    width: 80%;
-    border: solid 1px $gris-Medio;
-    margin: 2% auto;
+#contenedorTablaCompra {
+    table {
+        width: 80%;
+        border: solid 1px $gris-Medio;
+        margin: 2% auto;
+    }
 
     th {
         border: solid 1px $gris-Medio;
