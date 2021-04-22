@@ -1,40 +1,51 @@
 let carrito2 = JSON.parse(localStorage.getItem('carrito'));
-let tablaCompras = document.getElementById("carroCompras");
 
-const botonE = document.getElementById("eliminarCarrito");
-botonE.addEventListener('click', eliminarTabla);
+function subTotal(elemento) {
+  return (elemento.precio * elemento.cant);
+}
+
+function precioTotal(elementos){
+  $("#totalCompra p").remove();
+  let acum = 0;
+  for (const elemento of elementos) {
+    acum += (elemento.precio * elemento.cant);   
+  }
+  $("#totalCompra").append(`<p class="montoCompra">${acum}</p>`);
+   
+}
+
 //función que genera una tabla donde se insertan los productos seleccionados, usando el localStorage
 function actualizarCarrito(carro) {
-  // document.getElementById('contenedorTablaCompra').removeChild(tablaCompras);
-  $('#carroCompras tr').remove()
+  $("#carroCompras tr").remove();
+  
   for (const elemento of carro) {
-    let tablaProducto = document.createElement("tr");
-    tablaProducto.innerHTML = `<td> <img src='${elemento.img}' class='imgCarrito'></td>
+   $("#carroCompras").prepend(
+                                `<tr>
+                                <td> <img src='${elemento.img}' class='imgCarrito'></td>
                                 <td> ${elemento.nombre} </td>
                                 <td> ${elemento.precio} </td>
                                 <td> ${elemento.cant} </td>
-                                <td> <button onclick="borrarProducto('${elemento.serial}')"> borrar </button> </td>` 
-    tablaCompras.append(tablaProducto);
+                                <td> ${subTotal(elemento)} </td>
+                                <td> <button onclick="borrarProducto('${elemento.serial}')" class="botonEliminar"><img src="./img/papelera.png" class="botonEliminar--Img"></button> </td>
+                                </tr>` ); 
   }
-}
+  
 
+}
+// función para borrar cada producto del carrito por separado
 function borrarProducto(e) {
-  var carro = {}
-  // obtener estado anterior 
-  // buscar elemento a borrar
-  // borrar elemento
-  var carroBorrado = {}
-  actualizarCarrito(carroBorrado)
-  localStorage.setItem(carroBorrado);
-  // guardar en local storage
-  // llamar a renderizar con elemento borrado
+  const carro = JSON.parse(localStorage.getItem('carrito'));
+  let carroBorrado = [];
+  let elemento = carro.find((obj) => obj.serial == e);
+  let indice = carro.indexOf(elemento);
+  carro.splice(indice, 1); 
+  carroBorrado = JSON.stringify(carro);
+  actualizarCarrito(carro);
+  localStorage.setItem("carrito", carroBorrado);
+  contandoCarro();
+  precioTotal(carro);
 }
 
-//función para eliminar toda la tabla generada por la elección de los productos y el localStorage
-function eliminarTabla(e) {
-  // document.getElementById('contenedorTablaCompra').removeChild(tablaCompras);
-  localStorage.removeItem('carrito');
-  const newCarrito = JSON.parse(localStorage.getItem('carrito'));
-  actualizarCarrito(newCarrito);
-}
 actualizarCarrito(carrito2);
+precioTotal(carrito2);
+

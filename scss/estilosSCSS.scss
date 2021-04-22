@@ -6,6 +6,7 @@ $gris-Claro: #dfdede;
 *{
     margin: 0;
 }
+// ----------------------------------------------------------------------NAVBAR----------------------------------------------------------------------------------
 nav {
     background-color: $rosado;
     div.container-fluid { 
@@ -30,89 +31,7 @@ nav {
     }
     margin-bottom: 0px;
 }
-
-.seccionDeTienda--flexible {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.imagenProducto {
-    width: 200px;
-    height: 200px;
-}
-
-.botonComprar {
-    background-color: transparent;
-    color: $gris-Oscuro;
-    border: 2px solid $rosado;
-}
-.botonComprar:hover {
-    background-color: $rosado;
-    color: white;
-}
-
-.botonPokemon {
-    background-color: rgba(255, 0, 0, 0.384);
-    border: none; 
-}
-.botonPokemon:hover {
-    background-color: rgb(255, 0, 0);
-    border: white;    
-}
-
-.botonPokedex{
-    background-color: rgb(255, 70, 70);
-    color: white;   
-}
-div.modal-content{
-    background-color: red;
-    color: white;
-    border: 2px solid rgb(247, 247, 115);
-}
-h5#staticBackdropLabel{
-    font-size: 200%;
-    color: rgb(247, 247, 115);
-}
-#contenedorTablaCompra {
-    table {
-        width: 80%;
-        border: solid 1px $gris-Medio;
-        margin: 2% auto;
-    }
-
-    th {
-        border: solid 1px $gris-Medio;
-    }
-
-    th, td {
-        padding: 5px;
-    }
-}
-
-.imgCarrito {
-    width: 50px;
-    height: 50px;
-}
-
-.contenedorBotonesBody {
-    display: flex;
-    justify-content: center;
-}
-
-#toast{
-    display: none;
-    position: relative;
-    opacity: 0.8;
-    background-color: $gris-Claro;
-    color: $gris-Oscuro;
-    text-align: center;
-    margin: -15% auto;
-    padding: 10px;
-    border-radius: 10px;
-}
-
+// EFECTO DIAGONAL DEL NAVBAR_________________________________________
 div.figuraSVG{   
     position: relative;
     height: 100px;
@@ -121,12 +40,8 @@ div.figuraSVG{
     margin-bottom: 1%;
   }
   footer{
-    position: fixed;
     height: 100px;
-    background-color: $rosado;
-    margin-top: 0px;
-    margin-bottom: 1%;
-    bottom: 0;
+    background-color: $rosado;  
   }
   svg {
     position: absolute;
@@ -147,16 +62,14 @@ div.figuraSVG{
     }
   }
 
-
-  #main-index__imagenPokemon{
-
-	display: flex;
+// ---------------------------------------------------------------------MAIN--------------------------------------------------------------------------------
+.main-index__Img{
+    display: flex;
 	justify-content: center;
 	align-items: center;
 
 	margin-top: 2%;
     height: 30rem;
-	background-image: url(../img/pokemon2-min.jpg);
 	background-position: center center;
 	background-size: cover;
 	position: relative;
@@ -164,14 +77,28 @@ div.figuraSVG{
 	h3{
 
 	   color: white;
-	   font-size: 30px;
+	   font-size: 1.5rem;
 	   position: relative;
 	   text-align: center;
      }
-
 }
 
-#main-index__imagenPokemon:before{
+#main-index__Img--sticker{
+    @extend .main-index__Img;
+    background-image: url(../img/sticker2-min.jpg);
+}
+
+#main-index__Img--remera{
+    @extend .main-index__Img;
+    background-image: url(../img/remera2-min.jpg);
+}
+
+#main-index__Img--tote{
+    @extend .main-index__Img;
+    background-image: url(../img/tote3-min.jpg);
+}
+
+#main-index__Img--sticker:before, #main-index__Img--remera:before, #main-index__Img--tote:before {
 
 	content:'';
 	position: absolute;
@@ -179,10 +106,79 @@ div.figuraSVG{
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0,0,0,0.7);
 }
 
-// form{
-//     background-color: red;
-//     color: white;
-// }
+#seccionRemeras, #seccionStickers, #seccionToteBag{
+    display: none;
+}
+
+.seccionDeTienda--flexible {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+// BOTONES____________________________________________________
+.botonComprar {
+    background-color: transparent;
+    color: $gris-Oscuro;
+    border: 2px solid $rosado;
+    border-radius: 10px;
+}
+.botonComprar:hover {
+    background-color: $rosado;
+    color: white;
+}
+.botonComprar:focus{
+    outline: none;
+    box-shadow: none;
+}
+.botonEliminar{
+    background-color: transparent;
+    border: transparent;
+}
+.botonEliminar--Img{
+    width: 20px;
+    height: auto;
+}
+.index__botonGrande{
+    background-color: transparent;
+    border: none;
+}
+
+.index__botonGrande:focus{
+    outline: none;
+    box-shadow: none;
+}
+// TABLA DEL MAIN CARRITO.HTML________________________________________
+#contenedorTablaCompra {
+    table {
+        width: 70%;
+        border: solid 1px $gris-Medio;
+        margin: 2% auto;
+    }
+  
+    th {
+        border: solid 1px $gris-Medio;
+    }
+
+    th, td {
+        padding: 5px;
+        text-align: center;
+    }
+}
+
+.imgCarrito {
+    width: 50px;
+}
+
+.montoCompra{
+    margin: 10px;
+}
+
+#contenedorTablaCompra{
+    min-height: 80vh;
+}
+
+
