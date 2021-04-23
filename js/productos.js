@@ -52,7 +52,12 @@ function renderCard(elementos, contenedor, listado) {
                                <div class='card-body'>
                                <h5 class='card-title'>${producto.nombre}</h5>
                                <p class='card-text'>$ ${producto.precio}</p>
+                               <p id="${producto.serial}">${producto.cant}</p>
+                               <div class="container-fluid d-flex justify-content-center">
+                               <button class='btn botonCantidadProducto menos' id='${producto.serial}'><img id='${producto.serial}' src='img/menos.png' class="botonCantidadProducto--img"></button>
                                <button class='btn botonComprar' id='${producto.serial}'><img id='${producto.serial}' src='img/carrito.png'></button>
+                               <button class='btn botonCantidadProducto mas' id='${producto.serial}'><img id='${producto.serial}' src='img/mas.png' class="botonCantidadProducto--img"></button>
+                               </div>
                                </div>
                                </div>`;
   }
@@ -61,8 +66,17 @@ function renderCard(elementos, contenedor, listado) {
   listado.innerHTML = menu;
   contenedor.appendChild(listado);
   let botonesCarrito = document.getElementsByClassName("botonComprar");
+  let menosCant = document.getElementsByClassName("menos");
+  let masCant = document.getElementsByClassName("mas");
   for (const botonC of botonesCarrito) {
     botonC.addEventListener("click", seleccionarProducto);
     botonC.addEventListener("click", contandoCarro);
+  }
+  for (const menos of menosCant) {
+    menos.addEventListener("click", restarCantidad);
+    
+  }
+  for (const mas of masCant) {
+    mas.addEventListener("click", sumarCantidad);    
   }
 }

@@ -15,9 +15,15 @@ let contando = document.createElement("p");
 
 // función llamada en los eventos de "botonCarrito" que crea el array de los productos elegidos al presionar el botón de comprar
 function seleccionarProducto(e) {
+  let JQ = e.target.id;
   let productoElegido = tienda.find((obj) => obj.serial == e.target.id);
   productosElegidos.push(productoElegido);
   carroJSON(productoElegido);
+  $("#"+JQ).empty();
+  let indice = tienda.indexOf(productoElegido);
+  tienda[indice].cant = 1;
+  $("#"+JQ).append(`${tienda[indice].cant}`);
+
 }
 
 // // función que agrega productos al array del localstorage
@@ -32,7 +38,7 @@ function carroJSON(dato) {
     const validarCarrito = JSON.parse(localStorage.getItem("carrito"));
     let buscarProducto = validarCarrito.find((obj) => obj.serial == dato.serial);
     if (buscarProducto != undefined) {
-      buscarProducto.cant++;
+      buscarProducto.cant = buscarProducto.cant + dato.cant;
       for (let i = 0; i < validarCarrito.length; i++) {
         if (validarCarrito[i].serial == buscarProducto.serial) {
           validarCarrito[i].cant = buscarProducto.cant;
@@ -66,11 +72,41 @@ $(document).ready(function () {
 //región eventos: eventos para hacer el toggle a cada sección de la tienda
 $("#remera").click(() => {
   $("#seccionRemeras").toggle("fast");
+  $("#seccionStickers").hide("fast");
+  $("#seccionToteBag").hide("fast");
 });
 $("#sticker").click(() => {
   $("#seccionStickers").toggle("fast");
+  $("#seccionRemeras").hide("fast");
+  $("#seccionToteBag").hide("fast");
 });
 $("#tote").click(() => {
   $("#seccionToteBag").toggle("fast");
+  $("#seccionStickers").hide("fast");
+  $("#seccionRemeras").hide("fast");
 });
 // fin de la región
+
+// las funciones asociadas a los botones de disminuir o aumentar la cantidad de productos a agregar al carro
+ function sumarCantidad(e){
+   let JQ = e.target.id;
+   $("#"+JQ).empty();
+    let productoElegido = tienda.find((obj) => obj.serial == e.target.id);
+    let indice = tienda.indexOf(productoElegido);
+    tienda[indice].cant++;
+    console.log(tienda[indice].cant);
+    $("#"+JQ ).append(`${tienda[indice].cant}`);  
+  }
+
+  function restarCantidad(e) {
+    let JQ = e.target.id;
+    $("#"+JQ).empty();
+    let productoElegido = tienda.find((obj) => obj.serial == e.target.id);
+    let indice = tienda.indexOf(productoElegido);
+    if(tienda[indice].cant > 1){
+    tienda[indice].cant--;
+    console.log(tienda[indice].cant);
+    $("#"+JQ).append(`${tienda[indice].cant}`);
+    }    
+  }
+ 

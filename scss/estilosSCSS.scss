@@ -117,7 +117,17 @@ div.figuraSVG{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+div.card{
+    margin: 10px;
+    div.card-body{
+       text-align: center;
+       p#contadorProducto{
+           border: 1px solid $rosado;
+       }
+    }
 }
 // BOTONES____________________________________________________
 .botonComprar {
@@ -130,11 +140,8 @@ div.figuraSVG{
     background-color: $rosado;
     color: white;
 }
-.botonComprar:focus{
-    outline: none;
-    box-shadow: none;
-}
-.botonEliminar{
+
+.botonEliminar, .index__botonGrande, .botonCantidadProducto{
     background-color: transparent;
     border: transparent;
 }
@@ -142,14 +149,12 @@ div.figuraSVG{
     width: 20px;
     height: auto;
 }
-.index__botonGrande{
-    background-color: transparent;
-    border: none;
-}
-
-.index__botonGrande:focus{
+.botonComprar:focus, .index__botonGrande:focus, .botonCantidadProducto:focus{
     outline: none;
     box-shadow: none;
+}
+.botonCantidadProducto--img{
+    width: 15px;
 }
 // TABLA DEL MAIN CARRITO.HTML________________________________________
 #contenedorTablaCompra {

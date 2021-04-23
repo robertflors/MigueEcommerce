@@ -82,7 +82,14 @@ svg {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around; }
+  justify-content: center; }
+
+div.card {
+  margin: 10px; }
+  div.card div.card-body {
+    text-align: center; }
+    div.card div.card-body p#contadorProducto {
+      border: 1px solid #e58fbc; }
 
 .botonComprar {
   background-color: transparent;
@@ -94,11 +101,7 @@ svg {
   background-color: #e58fbc;
   color: white; }
 
-.botonComprar:focus {
-  outline: none;
-  box-shadow: none; }
-
-.botonEliminar {
+.botonEliminar, .index__botonGrande, .botonCantidadProducto {
   background-color: transparent;
   border: transparent; }
 
@@ -106,13 +109,12 @@ svg {
   width: 20px;
   height: auto; }
 
-.index__botonGrande {
-  background-color: transparent;
-  border: none; }
-
-.index__botonGrande:focus {
+.botonComprar:focus, .index__botonGrande:focus, .botonCantidadProducto:focus {
   outline: none;
   box-shadow: none; }
+
+.botonCantidadProducto--img {
+  width: 15px; }
 
 #contenedorTablaCompra table {
   width: 70%;
