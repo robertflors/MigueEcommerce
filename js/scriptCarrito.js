@@ -49,3 +49,21 @@ function borrarProducto(e) {
 actualizarCarrito(carrito2);
 precioTotal(carrito2);
 
+// botón para eliminar los productos del carrito
+$("#eliminarCarrito" ).click(function () { 
+  $("#carroCompras tr").remove();
+  localStorage.removeItem("carrito");
+  $("#totalCompra p").remove();
+  $("#contadorCarrito").empty();
+  
+});
+// evento que "limpia" el carrito una vez se haya enviado correctamente el formulario
+$("#compraRealizada").submit(function (e) { 
+  e.preventDefault();
+   $("#carroCompras tr").remove();
+  localStorage.removeItem("carrito");
+  $("#totalCompra p").remove();
+  $("#contadorCarrito").empty();
+  $("#exampleModal").modal("hide")
+  
+});

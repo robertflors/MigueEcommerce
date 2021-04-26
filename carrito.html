@@ -17,20 +17,19 @@
 </head>
 
 <body>
-  <!-- navbar -->
+  <!------------------------------------------------------- navbar----------------------------------------------------------->
   <nav class="navbar sticky-top navbar-light">
     <div class="container-fluid">
       <a class="navbar-brand me-auto p-2 bd-highlight logo" href="index.html">
-        <img src="img/m.png" alt="" width="30" height="24" class="d-inline-block align-top">
-        Migue's
+        <img src="img/logoNegro.PNG"  class="d-inline-block align-top navbar__imgLogo">
       </a>
       <a href="carrito.html" class="p-2 bd-highlight carritoIcono">
-        <img src="img/carrito.png" alt="">
+        <img src="img/carrito.png" class="navbar__imgCarrito">
         <div id="contadorCarrito"></div>
       </a>
 
-      <a href="favoritos.html" class="p-2 bd-highlight favoritos">
-        <img src="img/favoritos.png" alt="">
+      <a href="https://www.instagram.com/migueily/" class="p-2 bd-highlight favoritos">
+        <img src="img/instagram.png" class="navbar__imgInstagram">
       </a>
     </div>
   </nav>
@@ -41,7 +40,7 @@
         points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
     </svg>
   </div>
-
+<!-------------------------------------------------------------------------------------MAIN----------------------------------------------------------------------------->
   <section id="contenedorTablaCompra">
     <table>
       <thead>
@@ -60,8 +59,53 @@
     <div class="container-fluid d-flex justify-content-center" id="totalCompra">
       <h3>Total:</h3>
     </div>
+    <!-- botón para el modal -->
+    <div class="container-fluid d-flex justify-content-center">
+      <button type="button" class="btn botonFormulario" data-bs-toggle="modal" data-bs-target="#exampleModal">comprar</button>
+      <button type="button" class="btn botonFormulario" id="eliminarCarrito">eliminar</button>
+    </div>
+   
   </section>
 
+<!----------------------------FORMULARIO DE COMRPA------------------->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Formulario de compra</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body container">
+        <form id="compraRealizada">
+        <div class="mb-3">
+          <div class="input-group">
+            <span class="input-group-text">Nombre y Apellido</span>
+            <input type="text" aria-label="nombre" class="form-control" required>
+            <input type="text" aria-label="apellido" class="form-control" required>
+          </div>
+          <label for="exampleFormControlInput1" class="form-label">Coreo electrónico</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com" required>
+        </div>
+        <select class="form-select " aria-label="Default select example" required>
+          <option selected>Departamento</option>
+          <option value="1">Montevideo</option>
+          <option value="2">Canelones</option>
+          <option value="3">Maldonado</option>
+        </select>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Dirección</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
+        </div>
+        <input type="submit" value="confirmar" class="btn botonFormulario">
+        <input type="reset" class="btn botonFormulario" value="restablecer">
+      </form>      
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-------------------------------------------------------------FOOTER----------------------------------------------------------------------------->
   <footer class="container-fluid">
     <div></div>
   </footer>

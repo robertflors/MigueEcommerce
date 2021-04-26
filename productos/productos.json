@@ -1,178 +1,186 @@
  [{
-            "nombre": "remera1",
+            "nombre": "Remera Taza Caliente",
             "serial": "r1",
             "precio": 500,
-            "img": "./img/remera.jpg",
+            "img": "./img/remeras/americano1.PNG",
+            "img2": "./img/remeras/americano2.PNG",
             "tipo": "remera"
         },
         {
-            "nombre": "remera2",
+            "nombre": "Remera Chemex Marina",
             "serial": "r2",
             "precio": 500,
-            "img": "./img/remera.jpg",
+            "img": "./img/remeras/chemex1.PNG",
+            "img2": "./img/remeras/chemex2.PNG",
             "tipo": "remera"
         },
         {
-            "nombre": "remera3",
+            "nombre": "Remera Serpiente",
             "serial": "r3",
             "precio": 500,
-            "img": "./img/remera.jpg",
+            "img": "./img/remeras/culebra1.PNG",
+            "img2": "./img/remeras/culebra2.PNG",
             "tipo": "remera"
 
         },
         {
-            "nombre": "remera4",
+            "nombre": "Remera Gato Barista",
             "serial": "r4",
             "precio": 500,
-            "img": "./img/remera.jpg",
+            "img": "./img/remeras/gatoBarista1.PNG",
+            "img2": "./img/remeras/gatoBarista2.PNG",
             "tipo": "remera"
         },
         {
-            "nombre": "remera5",
+            "nombre": "Remera Honguito",
             "serial": "r5",
             "precio": 500,
-            "img": "./img/remera.jpg",
+            "img": "./img/remeras/hongo1.PNG",
+            "img2": "./img/remeras/hongo2.PNG",
             "tipo": "remera"
         },
         {
-            "nombre": "remera6",
+            "nombre": "Remera Oso Barista",
             "serial": "r6",
             "precio": 500,
-            "img": "./img/remera.jpg",
+            "img": "./img/remeras/osoBarista1.PNG",
+            "img2": "./img/remeras/osoBarista2.PNG",
             "tipo": "remera"
         },
         {
-            "nombre": "remera7",
+            "nombre": "Remera Robert",
             "serial": "r7",
             "precio": 500,
-            "img": "./img/remera.jpg",
+            "img": "./img/remeras/robert1.PNG",
+            "img2": "./img/remeras/robert2.PNG",
             "tipo": "remera"
         },
         {
-            "nombre": "remera8",
+            "nombre": "Remera WOK",
             "serial": "r8",
             "precio": 500,
-            "img": "./img/remera.jpg",
+            "img": "./img/remeras/wok1.PNG",
+            "img2": "./img/remeras/wok2.PNG",
             "tipo": "remera"
         },
 
 
 
         {
-            "nombre": "sticker1",
+            "nombre": "Oso Barista",
             "serial": "s1",
             "precio": 100,
-            "img": "./img/sticker.jpg",
+            "img": "./img/stickers/osoBarista.PNG",
             "tipo": "sticker"
         },
         {
-            "nombre": "sticker2",
+            "nombre": "Gato Barista",
             "serial": "s2",
             "precio": 100,
-            "img": "./img/sticker.jpg",
+            "img": "./img/stickers/gatoBarista.PNG",
             "tipo": "sticker"
         },
         {
-            "nombre": "sticekr3",
+            "nombre": "Taza Caliente",
             "serial": "s3",
             "precio": 100,
-            "img": "./img/sticker.jpg",
+            "img": "./img/stickers/americano.PNG",
             "tipo": "sticker"
         },
         {
-            "nombre": "sticker4",
+            "nombre": "Honguito",
             "serial": "s4",
             "precio": 100,
-            "img": "./img/sticker.jpg",
+            "img": "./img/stickers/hongo.PNG",
             "tipo": "sticker"
 
         },
         {
-            "nombre": "sticekr5",
+            "nombre": "WOK",
             "serial": "s5",
             "precio": 100,
-            "img": "./img/sticker.jpg",
+            "img": "./img/stickers/wok.PNG",
             "tipo": "sticker"
         },
         {
-            "nombre": "sticker6",
+            "nombre": "Robert",
             "serial": "s6",
             "precio": 100,
-            "img": "./img/sticker.jpg",
+            "img": "./img/stickers/robert.PNG",
             "tipo": "sticker"
         },
         {
-            "nombre": "sticker7",
+            "nombre": "Serpiente",
             "serial": "s7",
             "precio": 100,
-            "img": "./img/sticker.jpg",
+            "img": "./img/stickers/culebra.PNG",
             "tipo": "sticker"
             
         },
         {
-            "nombre": "sticker8",
+            "nombre": "Chemex Marina",
             "serial": "s8",
             "precio": 100,
-            "img": "./img/sticker.jpg",
+            "img": "./img/stickers/chemex.PNG",
             "tipo": "sticker"
         },
 
 
         
         {
-            "nombre": "tote bag1",
+            "nombre": "Tote bag Taza Caliente",
             "serial": "t1",
             "precio": 600,
-            "img": "./img/toteBag.jpg",
+            "img": "./img/tote/americano.PNG",
             "tipo": "tote"
         },
         {
-            "nombre": "tote bag2",
+            "nombre": "Tote bag Chemex Marina",
             "serial": "t2",
             "precio": 600,
-            "img": "./img/toteBag.jpg",
+            "img": "./img/tote/chemex.PNG",
             "tipo": "tote"
         },
         {
-            "nombre": "tote bag3",
+            "nombre": "Tote bag Serpiente",
             "serial": "t3",
             "precio": 600,
-            "img": "./img/toteBag.jpg",
+            "img": "./img/tote/culebra.PNG",
             "tipo": "tote"
         },
         {
-            "nombre": "tote bag4",
+            "nombre": "Tote bag Gato Barista",
             "serial": "t4",
             "precio": 600,
-            "img": "./img/toteBag.jpg",
+            "img": "./img/tote/gatoBarista.PNG",
             "tipo": "tote"
         },
         {
-            "nombre": "tote bag5",
+            "nombre": "Tote bag Honguito",
             "serial": "t5",
             "precio": 600,
-            "img": "./img/toteBag.jpg",
+            "img": "./img/tote/hongo.PNG",
             "tipo": "tote"
         },
         {
-            "nombre": "tote bag6",
+            "nombre": "Tote bag Oso Barista",
             "serial": "t6",
             "precio": 600,
-            "img": "./img/toteBag.jpg",
+            "img": "./img/tote/osoBarista.PNG",
             "tipo": "tote"
         },
         {
-            "nombre": "tote bag7",
+            "nombre": "Tote bag Robert",
             "serial": "t7",
             "precio": 600,
-            "img": "./img/toteBag.jpg",
+            "img": "./img/tote/robert.PNG",
             "tipo": "tote"
         },
         {
-            "nombre": "tote bag8",
+            "nombre": "Tote bag WOK",
             "serial": "t8",
             "precio": 600,
-            "img": "./img/toteBag.jpg",
+            "img": "./img/tote/wok.PNG",
             "tipo": "tote"
         }
     ]

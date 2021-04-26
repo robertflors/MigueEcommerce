@@ -17,6 +17,26 @@ nav {
   nav div.container-fluid a.favoritos {
     margin-right: 10%; }
 
+.navbar__imgLogo {
+  width: 150px;
+  height: auto; }
+
+.navbar__imgCarrito {
+  width: 40px; }
+
+.navbar__imgInstagram {
+  width: 35px; }
+
+@media (max-width: 500px) {
+  .navbar__imgLogo {
+    width: 90px;
+    height: auto; }
+  .navbar__imgCarrito {
+    width: 30px;
+    height: auto; }
+  .navbar__imgInstagram {
+    width: 25px; } }
+
 div.figuraSVG {
   position: relative;
   height: 100px;
@@ -88,8 +108,18 @@ div.card {
   margin: 10px; }
   div.card div.card-body {
     text-align: center; }
-    div.card div.card-body p#contadorProducto {
+    div.card div.card-body p.contadorProducto {
       border: 1px solid #e58fbc; }
+
+.comprado {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
 
 .botonComprar {
   background-color: transparent;
@@ -109,12 +139,24 @@ div.card {
   width: 20px;
   height: auto; }
 
-.botonComprar:focus, .index__botonGrande:focus, .botonCantidadProducto:focus {
+.botonComprar:focus, .index__botonGrande:focus, .botonCantidadProducto:focus, .botonFormulario:focus {
   outline: none;
   box-shadow: none; }
 
 .botonCantidadProducto--img {
   width: 15px; }
+
+.botonFormulario {
+  background-color: transparent;
+  color: #2c2b2b;
+  border: 2px solid #dfdede;
+  border-radius: 10px; }
+
+.botonFormulario:hover {
+  background-color: #dfdede; }
+
+.botonCarrusel {
+  background-color: #e58fbc; }
 
 #contenedorTablaCompra table {
   width: 70%;

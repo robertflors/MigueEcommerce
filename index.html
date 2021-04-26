@@ -21,16 +21,15 @@
   <nav class="navbar sticky-top navbar-light">
     <div class="container-fluid">
       <a class="navbar-brand me-auto p-2 bd-highlight logo" href="index.html">
-        <img src="img/m.png" alt="" width="30" height="24" class="d-inline-block align-top">
-        Migue's
+         <img src="img/logoNegro.PNG"  class="d-inline-block align-top navbar__imgLogo">
       </a>
       <a href="carrito.html" class="p-2 bd-highlight carritoIcono">
-        <img src="img/carrito.png" alt="">
+        <img src="img/carrito.png" class="navbar__imgCarrito">
         <div id="contadorCarrito"></div>
       </a>
 
-      <a href="favoritos.html" class="p-2 bd-highlight favoritos">
-        <img src="img/favoritos.png" alt="">
+      <a href="https://www.instagram.com/migueily/" class="p-2 bd-highlight favoritos">
+        <img src="img/instagram.png" class="navbar__imgInstagram">
       </a>
     </div>
   </nav>
@@ -48,13 +47,19 @@
   <section class="d-grid gap-0">
 
     <button class="btn index__botonGrande" type="button" id="remera"><div id="main-index__Img--remera" class="container-fluid"><h3>remeras</h3></div></button>
-    <div id="seccionRemeras"></div>
+    <div id="seccionRemeras"><div class="alert alert-danger comprado" role="alert">
+      producto agregado al <a href="carrito.html" class="alert-link">carrito</a>. 
+    </div> </div>
 
     <button class="btn index__botonGrande" type="button" id="sticker"><div id="main-index__Img--sticker" class="container-fluid"><h3>stickers</h3></div> </button> 
-    <div id="seccionStickers"></div>
+    <div id="seccionStickers"><div class="alert alert-danger comprado" role="alert">
+      producto agregado al <a href="carrito.html" class="alert-link">carrito</a>. 
+    </div> </div>
 
     <button class="btn index__botonGrande" type="button" id="tote"><div id="main-index__Img--tote" class="container-fluid"><h3>tote bags</h3></div></button>
-    <div id="seccionToteBag"></div>
+    <div id="seccionToteBag"><div class="alert alert-danger comprado" role="alert">
+      producto agregado al <a href="carrito.html" class="alert-link">carrito</a>. 
+    </div> </div>
 
   </section>
   </main>  
@@ -72,6 +77,7 @@
   <!--  scripts propios -->
   <script src="js/scriptIndex.js"></script>
   <script src="js/productos.js"></script>
+
 </body>
 
 </html>

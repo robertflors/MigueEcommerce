@@ -31,6 +31,33 @@ nav {
     }
     margin-bottom: 0px;
 }
+// las imágenes del navbar________________________________________
+.navbar__imgLogo{
+    width: 150px;
+    height: auto;
+}
+
+.navbar__imgCarrito{
+    width: 40px;
+}
+.navbar__imgInstagram{
+    width: 35px;
+}
+
+@media(max-width: 500px){
+    .navbar__imgLogo{
+        width: 90px;
+        height: auto;
+    }
+    
+    .navbar__imgCarrito{
+        width: 30px;
+        height: auto;
+    }
+    .navbar__imgInstagram{
+        width: 25px;
+    }
+}
 // EFECTO DIAGONAL DEL NAVBAR_________________________________________
 div.figuraSVG{   
     position: relative;
@@ -82,7 +109,7 @@ div.figuraSVG{
 	   text-align: center;
      }
 }
-
+// los botones que asociados a las secciones de productos que a su vez son banners
 #main-index__Img--sticker{
     @extend .main-index__Img;
     background-image: url(../img/sticker2-min.jpg);
@@ -108,11 +135,11 @@ div.figuraSVG{
 	right: 0;
 	background-color: rgba(0,0,0,0.7);
 }
-
+// las secciones donde estás contenidas las cards de los productos, ocultas para que aparezcan con el toggle
 #seccionRemeras, #seccionStickers, #seccionToteBag{
     display: none;
 }
-
+// una clase que ordena las secciones de los productos
 .seccionDeTienda--flexible {
     display: flex;
     flex-wrap: wrap;
@@ -124,11 +151,24 @@ div.card{
     margin: 10px;
     div.card-body{
        text-align: center;
-       p#contadorProducto{
+       p.contadorProducto{
            border: 1px solid $rosado;
        }
     }
 }
+// alerta que aparece al elegir un producto
+.comprado{
+    display: none;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
 // BOTONES____________________________________________________
 .botonComprar {
     background-color: transparent;
@@ -149,12 +189,25 @@ div.card{
     width: 20px;
     height: auto;
 }
-.botonComprar:focus, .index__botonGrande:focus, .botonCantidadProducto:focus{
+.botonComprar:focus, .index__botonGrande:focus, .botonCantidadProducto:focus, .botonFormulario:focus{
     outline: none;
     box-shadow: none;
 }
 .botonCantidadProducto--img{
     width: 15px;
+}
+.botonFormulario{
+    background-color: transparent;
+    color: $gris-Oscuro;
+    border: 2px solid $gris-Claro;
+    border-radius: 10px;     
+}
+.botonFormulario:hover{
+   background-color: $gris-Claro; 
+}
+// -------para los botones de bootstrap
+.botonCarrusel{
+    background-color:$rosado;    
 }
 // TABLA DEL MAIN CARRITO.HTML________________________________________
 #contenedorTablaCompra {
@@ -185,5 +238,4 @@ div.card{
 #contenedorTablaCompra{
     min-height: 80vh;
 }
-
 

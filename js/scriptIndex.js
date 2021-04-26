@@ -87,7 +87,15 @@ $("#tote").click(() => {
 });
 // fin de la región
 
+// alert que aparece al agregar un producto al carrito
+function alertaCompra(){ 
+  $(".comprado").show(100)
+                .delay(1000)
+                .hide(50); 
+};
+
 // las funciones asociadas a los botones de disminuir o aumentar la cantidad de productos a agregar al carro
+// aumenta la cantidad del producto a agregar
  function sumarCantidad(e){
    let JQ = e.target.id;
    $("#"+JQ).empty();
@@ -97,7 +105,7 @@ $("#tote").click(() => {
     console.log(tienda[indice].cant);
     $("#"+JQ ).append(`${tienda[indice].cant}`);  
   }
-
+// disminuye la cantidad del producto a agregar
   function restarCantidad(e) {
     let JQ = e.target.id;
     $("#"+JQ).empty();
@@ -109,4 +117,5 @@ $("#tote").click(() => {
     $("#"+JQ).append(`${tienda[indice].cant}`);
     }    
   }
+ 
  
